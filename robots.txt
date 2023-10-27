@@ -2,4 +2,4 @@
 User-agent:*
 Disallow:
 
-Sitemap: https://mister-hope.github.io/tdy-blogs/sitemap.xml
+Sitemap: https://tandayuan.github.io/tdy-blogs/tdy-blogs/sitemap.xml
