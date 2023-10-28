@@ -98,9 +98,9 @@ ts文件应当被当成一个模块去引用，防止以上情况出现。
 
 + `document.queryCommandSupported()`：
 
-+  `HTMLInputElement.select()`：HTMLInputElement.select() 方法选中一个 <textarea> 元素或者一个带有 text 字段的 <input> 元素里的所有内容。
++  `HTMLInputElement.select()`：HTMLInputElement.select() 方法选中一个 `<textarea>` 元素或者一个带有 text 字段的 `<input>` 元素里的所有内容。
 
-+ `HTMLInputElement.setSelectionRange()`：HTMLInputElement.setSelectionRange 方法用于设定<input> 或 <textarea> 元素中当前选中文本的起始和结束位置。`setSelectionRange` 方法只能应用于type为文本、搜索、链接、电话号码和密码的输入。
++ `HTMLInputElement.setSelectionRange()`：HTMLInputElement.setSelectionRange 方法用于设定`<input>` 或 `<textarea>` 元素中当前选中文本的起始和结束位置。`setSelectionRange` 方法只能应用于type为文本、搜索、链接、电话号码和密码的输入。
 
 + `HTMLInputElement.select()`与`HTMLInputElement.setSelectionRange()`区别：前者只能全选、后者可以指定起始与结束的索引选中
 + `document.queryCommandSupported()`：Document.queryCommandSupported() 方法确定浏览器是否支持指定的编辑指令。
