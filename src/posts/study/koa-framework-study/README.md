@@ -188,7 +188,7 @@ https://github.com/Tandayuan/koa-simple-study
 
       ![image-20230331172033345](./images/StudyGuide/image-20230331172033345.png)
 
-      ![image-20230331172058048](.\images\image-20230331172058048.png)
+      ![image-20230331172058048](./images/image-20230331172058048.png)
 
   + 所有中间件函数执行完成，执行响应体函数：
 
