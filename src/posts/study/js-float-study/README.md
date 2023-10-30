@@ -46,11 +46,11 @@ https://github.com/Tandayuan/js-float-study
 >
 > 定点数与浮点数的定义和区别：
 >
-> ![image-20230410145407940](images/StudyGuide/image-20230410145407940.png)
+> ![image-20230410145407940](./images/StudyGuide/image-20230410145407940.png)
 >
-> ![image-20230410145605696](images/StudyGuide/image-20230410145605696.png)
+> ![image-20230410145605696](./images/StudyGuide/image-20230410145605696.png)
 >
-> ![image-20230410150048918](images/StudyGuide/image-20230410150048918.png)
+> ![image-20230410150048918](./images/StudyGuide/image-20230410150048918.png)
 >
 > 对比总结：浮点数表示范围更广、运算复杂度更高，但精度没那么高。
 
@@ -64,7 +64,7 @@ https://github.com/Tandayuan/js-float-study
 
 + 普通二进制：
 
-  ![image-20230410163710284](images/StudyGuide/image-20230410163710284.png)
+  ![image-20230410163710284](./images/StudyGuide/image-20230410163710284.png)
 
   0.1转成二进制是一个无限循环的数，它会无限循环0011。
 
@@ -86,13 +86,13 @@ https://github.com/Tandayuan/js-float-study
 
   不同精度的浮点数指标：
 
-  ![image-20230410165619195](images/StudyGuide/image-20230410165619195.png)
+  ![image-20230410165619195](./images/StudyGuide/image-20230410165619195.png)
 
   浮点数二进制组成：
 
   符号位与二进制一致；0 正数 1 负数
 
-  ![image-20230410165832562](images/StudyGuide/image-20230410165832562.png)
+  ![image-20230410165832562](./images/StudyGuide/image-20230410165832562.png)
 
   **指数位计算：**
 
@@ -106,11 +106,11 @@ https://github.com/Tandayuan/js-float-study
 
   **双精度浮点数二进制表示：**
 
-  ![image-20230410171136267](images/StudyGuide/image-20230410171136267.png)
+  ![image-20230410171136267](./images/StudyGuide/image-20230410171136267.png)
 
 + IEEE 754标准浮点数十进制：
 
-  > 2转10公式：![image-20230410174050379](images/StudyGuide/image-20230410174050379.png)
+  > 2转10公式：![image-20230410174050379](./images/StudyGuide/image-20230410174050379.png)
   >
   > s是符号位 0正数 1负数；e是指数位的十进制；M是二进制尾数位的数
 
@@ -122,23 +122,23 @@ https://github.com/Tandayuan/js-float-study
 
   以上计算结果是：Decimal(exact)是0.1的双精度浮点数的十进制表示
 
-  ![image-20230410180030398](images/StudyGuide/image-20230410180030398.png)
+  ![image-20230410180030398](./images/StudyGuide/image-20230410180030398.png)
 
 #### 通过以上原理知道0.1+0.2 != 0.3的原因：
 
 0.1和0.2转换成双精度浮点数二进制：
 
-![image-20230410212832725](images/StudyGuide/image-20230410212832725.png)
+![image-20230410212832725](./images/StudyGuide/image-20230410212832725.png)
 
 双精度浮点数相加：
 
-![image-20230410221435947](images/StudyGuide/image-20230410221435947.png)
+![image-20230410221435947](./images/StudyGuide/image-20230410221435947.png)
 
-![image-20230410221922604](images/StudyGuide/image-20230410221922604.png)
+![image-20230410221922604](./images/StudyGuide/image-20230410221922604.png)
 
 结果转十进制：
 
-![image-20230410222034072](images/StudyGuide/image-20230410222034072.png)
+![image-20230410222034072](./images/StudyGuide/image-20230410222034072.png)
 
 ### 小数丢失精度原因：
 
@@ -148,7 +148,7 @@ https://github.com/Tandayuan/js-float-study
 
 + 造成页面数值混乱BUG：
 
-![image-20230410222636326](images/StudyGuide/image-20230410222636326.png)
+![image-20230410222636326](./images/StudyGuide/image-20230410222636326.png)
 
 + 解决方案：
 

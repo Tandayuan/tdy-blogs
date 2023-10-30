@@ -38,64 +38,64 @@ https://github.com/Tandayuan/koa-simple-study
 
 + package.json开启jest的调试，被测试的it/test对象后增加only可以只对当前用例调试，避免其他用例干扰。
 
-  ![](images/StudyGuide/Snipaste_2023-03-30_15-57-55.png)
+  ![](./images/StudyGuide/Snipaste_2023-03-30_15-57-55.png)
 
 + 调试`should work`用例，在`await compose(stack)({})`提前打好断点，F11进入源代码调试。
 
 + 跳转到`index.js`  在33行打断点再F5跳到指定位置，可以跳过校验数组元素类型的循环。
 
-  ![image-20230330161007461](images/StudyGuide/image-20230330161007461.png)
+  ![image-20230330161007461](./images/StudyGuide/image-20230330161007461.png)
 
 + 在`return *Promise*.resolve(fn(*context*, dispatch.bind(null, *i* + 1)))`打个断点，F5跳转到断点处，再F11单步调试跟踪代码执行。
 
 + 跟踪到第一个中间件函数，一直往下执行到24行的next()，F11单步调试跟踪。
 
-  ![image-20230330164245894](images/StudyGuide/image-20230330164245894.png)
+  ![image-20230330164245894](./images/StudyGuide/image-20230330164245894.png)
 
   + 可以看出next()执行的就是dispatch()，i的值是1。
 
-    ![image-20230330164442343](images/StudyGuide/image-20230330164442343.png)
+    ![image-20230330164442343](./images/StudyGuide/image-20230330164442343.png)
 
   + 得出结论：执行middleware数组中的中间件函数，将dispatch高阶函数的参数预设为i+1，目的是准备好中间件数组索引是i+1的函数，等待每个中间件函数的第二个参数next调用。触发dispatch(i+1)，依次类推，像一个递归的行为。
 
-    ![image-20230330164533045](images/StudyGuide/image-20230330164533045.png)
+    ![image-20230330164533045](./images/StudyGuide/image-20230330164533045.png)
 
 + 按照上一步骤的调试方法进行剩余的调试。
 
 + 调试完这个测试用例后得出源码结论：
 
-  ![image-20230330163620306](images/StudyGuide/image-20230330163620306.png)
+  ![image-20230330163620306](./images/StudyGuide/image-20230330163620306.png)
 
 + 通过调试发现代码的执行流程是如下的：
 
   类似于一个洋葱的形状，代码是由外到内执行，执行完成后再由内到外执行剩下的代码。
 
-  ![image-20230330165115017](images/StudyGuide/image-20230330165115017.png)
+  ![image-20230330165115017](./images/StudyGuide/image-20230330165115017.png)
 
-![image-20230330165143979](images/StudyGuide/image-20230330165143979.png)
+![image-20230330165143979](./images/StudyGuide/image-20230330165143979.png)
 
 + 由下图分析可知，由外到内依次执行上半区的代码再由内到外执行下半区的代码，形成一个洋葱模型
 
 
-![image-20230330170150601](images/StudyGuide/image-20230330170150601.png)
+![image-20230330170150601](./images/StudyGuide/image-20230330170150601.png)
 
 ### 调试should throw if next() is called multiple times测试用例
 
 + 断点第二个next()，模拟多次执行next
 
-  ![image-20230330171216643](images/StudyGuide/image-20230330171216643.png)
+  ![image-20230330171216643](./images/StudyGuide/image-20230330171216643.png)
 
   ps：开启断点调试后再往next断点，F5使小黄标指在next前再F11才能进到源码调试查看。
 
-![image-20230330171336475](images/StudyGuide/image-20230330171336475.png)
+![image-20230330171336475](./images/StudyGuide/image-20230330171336475.png)
 
-+ 第一次调用next更新了index的值，当多次调用next，会抛出对应错误。![image-20230330172556696](images/StudyGuide/image-20230330172556696.png)
++ 第一次调用next更新了index的值，当多次调用next，会抛出对应错误。![image-20230330172556696](./images/StudyGuide/image-20230330172556696.png)
 
 ### 调试should catch downstream errors测试用例
 
-+ 下游中间件函数报错的时候上游可以捕获到![image-20230330173231741](images/StudyGuide/image-20230330173231741.png)
++ 下游中间件函数报错的时候上游可以捕获到![image-20230330173231741](./images/StudyGuide/image-20230330173231741.png)
 
-![image-20230330173621175](images/StudyGuide/image-20230330173621175.png)
+![image-20230330173621175](./images/StudyGuide/image-20230330173621175.png)
 
 ## 学习高阶函数概念
 
