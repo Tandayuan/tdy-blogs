@@ -1,5 +1,7 @@
 ---
 date: 2023-05-31
+dir:
+  link: true
 ---
 # element-ui自动新增组件方式学习
 

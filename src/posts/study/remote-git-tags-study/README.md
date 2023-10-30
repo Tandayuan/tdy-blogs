@@ -1,5 +1,7 @@
 ---
 date: 2023-02-23
+dir:
+  link: true
 ---
 # callback promisify 化的 Node.js 源码实现
 

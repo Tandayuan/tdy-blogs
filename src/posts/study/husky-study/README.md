@@ -1,6 +1,8 @@
 ---
 title: husky部署学习记录
 date: 2023-02-27
+dir:
+  link: true
 ---
 ## 仓库地址
 https://github.com/Tandayuan/husky-study

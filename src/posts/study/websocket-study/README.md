@@ -1,5 +1,7 @@
 ---
 date: 2023-07-13
+dir:
+  link: true
 ---
 # WebSocket简单学习应用
 

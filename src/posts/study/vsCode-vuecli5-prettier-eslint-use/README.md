@@ -1,5 +1,7 @@
 ---
 date: 2023-06-13
+dir:
+  link: true
 ---
 # vsCode-vuecli5-prettier-eslint框架学习
 

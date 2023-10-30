@@ -1,6 +1,8 @@
 ---
 title: 理解p-limit实现原理
 date: 2023-03-24
+dir:
+  link: true
 ---
 ## 仓库地址
 https://github.com/Tandayuan/p-limit-study

@@ -1,6 +1,8 @@
 ---
 title: docker+jekins理解学习
 date: 2023-07-12
+dir:
+  link: true
 ---
 ## 仓库地址
 https://github.com/Tandayuan/docker-jenkins-study

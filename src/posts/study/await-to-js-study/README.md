@@ -1,5 +1,7 @@
 ---
 date: 2023-06-04
+dir:
+  link: true
 ---
 # vscode-vite-ts-eslint-prettier-jest-pnpm框架学习
 

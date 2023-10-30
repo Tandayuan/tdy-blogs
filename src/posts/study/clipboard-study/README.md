@@ -1,6 +1,8 @@
 ---
 title: clipboard剪切板实现学习
 date: 2023-03-15
+dir:
+  link: true
 ---
 ## 仓库地址
 https://github.com/Tandayuan/clipboard-study

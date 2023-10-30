@@ -1,6 +1,8 @@
 ---
 title: miit发布订阅学习
 date: 2023-03-03
+dir:
+  link: true
 ---
 ## 仓库地址
 https://github.com/Tandayuan/mitt-study

@@ -1,5 +1,7 @@
 ---
 date: 2023-05-13
+dir:
+  link: true
 ---
 # Fork仓库指南
 
